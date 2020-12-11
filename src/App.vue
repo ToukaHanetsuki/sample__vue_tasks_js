@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>TASK management</h1>
+    <FormCreateTask class="form-create-task"/>
+    <TableTask class="table-task"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormCreateTask from './components/organisms/forms/FormCreateTask.vue'
+import TableTask from './components/organisms/tables/TableTask.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormCreateTask,
+    TableTask
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.table-task {
+  margin-top: 1rem;
 }
 </style>
